@@ -1,0 +1,10 @@
+img-4k : 3840 x 2560
+img-2k: 2560 x ???? 
+desktop-HD: 1920 x ????
+img-phone-3dppx: 1500 x >1500 (have to crop and maintain aspect ratio) 
+portfolio - big:         911  x 520 		Quality 30
+portfolio - med:         543  x 304		Quality 40
+portfolio - small x1dpp: 340  x 192		Quality 40
+portfolio - small x2dpp: 680  x 384		Quality 40
+portfolio - small x3dpp: 1020 x 576		Quality 40
+ 
