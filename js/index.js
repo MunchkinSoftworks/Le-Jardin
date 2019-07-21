@@ -1,38 +1,23 @@
-$(document).ready(function (){
-    $(".smooth-scroll").click(function(event){
-        event.preventDefault();
-        var section = $(this).attr("href");
-        $('html, body').animate({
-            scrollTop: $(section).offset().top + 160
-        }, 2000);
-    });
-    //smooth-scroll-home
-    $(".smooth-scroll-home").click(function(event){
-        event.preventDefault();
-        var section = $(this).attr("href");
-        $('html, body').animate({
-            scrollTop: $(section).offset().top 
-        }, 2000);
-    });
-    // slider
-    
-    //create the slider
+window.addEventListener("load", function(){  //when page loads, fade out the page loader/spinner
+    const loader = document.querySelector(".loading__wrapper");
+    loader.className += " loading__fadeout";
 });
-//alert("hello world"); 
-//$(".waypoint--1").waypoint(function(direction){
-//    if(direction == "down"){
-//        //alert("hellow worlds");
-///        $('.waypoint--1').addClass('fixed-nav');
-//    }
-//}, {
-//    offset: '65%'
-///});
-//$(".waypoint--2").waypoint(function(direction){
-//    if(direction == "down"){
-///        //alert("hellow worlds");
-///        $('.waypoint--2').addClass('fadeIn-center');
-//    }
-//}, {
-//    offset: '65%'
-//});
-
+var condition = false;
+function test_1 () {
+    var btn = document.getElementById("credit-content_1");
+    var content = document.getElementById("credit-content_2");
+    if (condition == false) {
+        $('#credit-content_2').animate({maxHeight: '500',
+        },500, function() {
+            content.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+        });
+        content.style.paddingTop = "30px";
+        btn.classList.add("credits__active");
+        condition = true;
+    } else {
+        $('#credit-content_2').animate({maxHeight: '0'},500);
+        $('#credit-content_2').animate({paddingTop: '0'},100);
+        btn.classList.remove("credits__active");
+        condition = false; 
+    }
+}
