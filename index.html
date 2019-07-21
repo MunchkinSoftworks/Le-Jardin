@@ -1,265 +1,296 @@
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
+    <style>
+        html {
+            visibility: hidden;
+            background-image: linear-gradient(to bottom right, #55c57a, #51d0de);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>    
     <meta http-equiv="Content-Type" content="text/html; charset=UFT-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!--this line of code makes it so that 1 css pixel = 1 pixel according to the viewport of the device. Then the device can assign 1 to several pixels per viewport pixel deppending on the device pixel density a value usually between 1 and 3-->
-    <link rel="manifest" href="manifest.json">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,700|Pacifico|Roboto:300,500" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <!-- INSERT FAVICON HERE-->
     
     <title>Le Jardin</title>
 </head>
 <body>
-    <div class="test-block"></div>
-    <div class="grid-container">
+    <div class="loading__wrapper">
+        <svg id="svg-animation" class="loading__svg" version="2.0" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" width="128px" height="128px" viewBox="0 0 128 128"
+            xml:space="preserve">
+            <rect id="rect-1" x="0" y="50" width="30" height="50" fill="#fff"></rect>
+            <rect id="rect-2" x="50" y="50" width="30" height="50" fill="#fff"></rect>
+            <rect id="rect-3" x="100" y="50" width="30" height="50" fill="#fff"></rect>
+        </svg>
+    </div>
+    <header class="heading__grid">
         <div id="header-bg" class="fixed-img"></div>
-        <div id="header__veil" class="veil-header"></div>
-        <header class="heading">           
-            <div class="heading__title">
-                <h1 class="heading__title--h1">Le Jardin</h1>
-                <h2 class="heading__title--h2">Delicious, Healthy and Afssssfordable!</h2>
-                <div class="heading__title--bg"></div>
-            </div>
-        </header>
-        <div class="nav-bg"></div>
-        <nav class="nav waypoint--1">
-            <ul class="nav__ul">
-                <li class="nav__li">
-                    <a href="#header-bg" class="nav__a smooth-scroll-home">HOME</a>
-                </li>
-                <li class="nav__li"></a>
-                </li>
-                <li class="nav__li">
-                    <a href="#whatWeDoIMG-bg" class="nav__a smooth-scroll">philosophy</a>
-                </li>
-                <li class="nav__li">
-                    <a href="#aboutUsIMG-bg" class="nav__a smooth-scroll">Our Story</a>
-                </li>
-                <li class="nav__li">
-                    <a href="#galleryIMG-bg" class="nav__a smooth-scroll">menu</a>
-                </li>
-                <li class="nav__li">
-                    <a href="#testimonialsIMG-bg" class="nav__a smooth-scroll">testimonials</a>
-                </li>
-                <li class="nav__li">
-                    <a href="#findUsIMG-bg" class="nav__a smooth-scroll">find us</a>
-                </li>
-                <li class="nav__li">
-                    <a href="#contactUsIMG-bg" class="nav__a smooth-scroll">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <div id="whatWeDoIMG-bg" class="fixed-img"></div>
-        <div id="whatWeDoVeil" class="veil"></div>
-        <div id="whatWeDoTXT-bg" class="text-bg"></div>
-        <section class="whatWeDo">
-            <h3 class=" padding-container-top border-bottom-dark">what we do</h3> 
-            <div class="whatWeDo__wrapper padding-container-bot padding-container-top">
-                <div class="whatWeDo__wrapper--unit ">
-                    <svg class="whatWeDo__icon padding-right-icon">
-                        <use xlink:href="icon/sprite.svg#icon-heart"></use>
+        <div class="heading__title">
+            <h1 class="heading__title--h1">Le Jardin</h1>
+            <h2 class="heading__title--h2">Delicious, Healthy and Affordable! </h2>
+            <div class="heading__title--bg"></div>
+            <a href="#" class="heading__title--cta_button gallery__button-4"> View Menu</a>
+        </div>
+    </header>
+    <nav class="nav">
+        <ul class="nav__ul">
+            <a href="#header-bg" class="nav__a smooth-scroll-home">HOME</a>
+            <a href="#whatWeDoIMG-bg" class="nav__a smooth-scroll">philosophy</a>
+            <a href="#aboutUsIMG-bg" class="nav__a smooth-scroll">Our Story</a>
+            <a href="#galleryIMG-bg" class="nav__a smooth-scroll">menu</a>
+            <a href="#testimonialsIMG-bg" class="nav__a smooth-scroll">testimonials</a>
+            <a href="#findUsIMG-bg" class="nav__a smooth-scroll">find us</a>
+            <a href="#contactUsIMG-bg" class="nav__a smooth-scroll">Contact</a>
+        </ul>
+    </nav>
+    <section id="whatWeDo-ID">
+        <div class="image-grid">
+            <div id="whatWeDoIMG-bg" class="fixed-img"></div>
+        </div>
+        <div class="whatWeDo__contentWrapper">
+            <h3 class="whatWeDo--h3 border-bottom-dark">what we do</h3>
+            <div class="whatWeDo__grid">
+                <div class="whatWeDo__grid--cell" >
+                    <svg class="whatWeDo__svg">
+                        <use xlink:href="svgs/sprite.svg#icon-heart"></use>
                     </svg>
                     <div class="whatWeDo__textBlock">
-                        <h4 class="padding-bot-h4">Healthy</h4>
-                        <p>What do they got in there? King Kong? Did he just throw my cat out of the window?</p> 
+                        <h4 class="whatWeDo--h4" >Healthy</h4>
+                        <p>What do they got in there? King Kong? Did he just throw my cat out of the window?</p>
                     </div>
                 </div>
-                <div class="whatWeDo__wrapper--unit">
-                    <svg class="whatWeDo__icon padding-right-icon">
-                        <use xlink:href="icon/sprite.svg#icon-leaf"></use>
+                <div class="whatWeDo__grid--cell">
+                    <svg class="whatWeDo__svg">
+                        <use xlink:href="svgs/sprite.svg#icon-leaf"></use>
                     </svg>
                     <div class="whatWeDo__textBlock">
-                        <h4 class="padding-bot-h4">Fresh Ingredients</h4>
-                        <p>We gotta burn the rain forest, dump toxic waste, pollute the air</p> 
+                        <h4 class="whatWeDo--h4">Fresh Ingredients</h4>
+                        <p>We gotta burn the rain forest, dump toxic waste, pollute the air</p>
                     </div>
                 </div>
-                <!--
-                <div class="whatWeDo__wrapper--unit">
-                    <svg class="whatWeDo__icon padding-right-icon">
-                        <use xlink:href="icon/sprite.svg#icon-spoon-knife"></use>
+                <div class="whatWeDo__grid--cell">
+                    <svg class="whatWeDo__svg">
+                        <use xlink:href="svgs/sprite.svg#icon-price-tags"></use>
                     </svg>
                     <div class="whatWeDo__textBlock">
-                        <h4 class="padding-bot-h4">Delicious</h4>
-                        <p>My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry</p> 
-                    </div>
-                </div>
-                -->
-                <div class="whatWeDo__wrapper--unit">
-                    <svg class="whatWeDo__icon padding-right-icon">
-                        <use xlink:href="icon/sprite.svg#icon-price-tags"></use>
-                    </svg>
-                    <div class="whatWeDo__textBlock">
-                        <h4 class="padding-bot-h4">Affordable</h4>
-                        <p>Cause maybe if we screw up this planet enough, they won't want it anymore!</p> 
+                        <h4 class="whatWeDo--h4">Affordable</h4>
+                        <p>Cause maybe if we screw up this planet enough, they won't want it anymore!</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <div id="aboutUsIMG-bg" class="fixed-img"></div>
-        <div id="aboutUsVeil" class="veil"></div>
-        <div id="aboutUsTXT-bg" class="text-bg"></div>
-        <section class="aboutUs">
-            <h3 class="padding-bot-h3 padding-container-top">Our Story</h3>
-            <p class="padding-botTXT">What do they got in there? King Kong? Did he just throw my cat out of the window? We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! 'Cause maybe if we screw up this planet enough, they won't want it anymore! This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows.</p>
-            <p class="padding-container-bot"> We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! 'Cause maybe if we screw up this planet enough, they won't want it anymore! My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!</p>
-        </section>
-        <div id="galleryIMG-bg" class="fixed-img"></div>
-        <div id="galleryVeil" class="veil"></div>
-        <div id="galleryTXT-bg" class="text-bg"></div>
-        <section class="gallery">
-            <h3 class="padding-bot-h3 padding-container-top align-text-center border-bottom-dark">Menu</h3>
-            <div class="gallery__wrapper padding-container-bot">
+        </div>
+    </section>
+    <section id="ourStory-ID">
+        <div class="image-grid">
+            <div id="ourStoryIMG-bg" class="fixed-img"></div>
+        </div>
+        <div class="ourStory__contentWrapper">
+            <div class="ourStory__content">
+                <h3 class="padding-botTXT">Our Story</h3>
+                <p class="padding-botTXT">What do they got in there? King Kong? Did he just throw my cat out of the window? We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! 'Cause maybe if we screw up this planet enough, they won't want it anymore! This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows.</p>
+                <p class="padding-container-bot"> We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! 'Cause maybe if we screw up this planet enough, they won't want it anymore! My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!</p>
+            </div>
+        </div>
+    </section>
+    <section id="menu-ID">
+        <div class="image-grid">
+            <div id="menuIMG-bg" class="fixed-img"></div>
+        </div>
+        <div class="menu__contentWrapper">
+            <h3 class="border-bottom-dark">Menu</h3>
+            <div class="menu__grid">
                 <div class="gallery__unit">
                     <div id="galleryIMG-1" class="gallery__unit--image"></div>
                     <figcaption class="gallery__unit--figcaption">
-                        <h3 class="gallery__unit--figcaption-h3" >Hamburger</h3>
-                        <p class="gallery__unit--figcaption-p"> <span>Ingredients: </span>Grilled angus beef patty, Onions, Pickles, Tomatoes, Whole wheat bun. Side of French Fries</p>
+                        <h3 class="gallery__unit--figcaption-h3">Hamburger</h3>
+                        <p class="gallery__unit--figcaption-p"> <span>Ingredients: </span>Grilled angus beef patty,
+                            Onions, Pickles, Tomatoes, Whole wheat bun. Side of French Fries</p>
                     </figcaption>
                 </div>
                 <div class="gallery__unit-ef2">
                     <div id="galleryIMG-2" class="gallery__unit-ef2--image"></div>
                     <figcaption class="gallery__unit-ef2--figcaption">
-                        <h3 class="gallery__unit-ef2--figcaption-h3" >Cherry Granola Parfait</h3>
-                        <p class="gallery__unit-ef2--figcaption-p"> <span>Ingredients: </span>Cherries, Almong granola, Greek yogurt, Strawberries</p>
+                        <h3 class="gallery__unit-ef2--figcaption-h3">Cherry Granola Parfait</h3>
+                        <p class="gallery__unit-ef2--figcaption-p"> <span>Ingredients: </span>Cherries, Almong granola,
+                            Greek yogurt, Strawberries</p>
                     </figcaption>
                 </div>
                 <div class="gallery__unit">
                     <div id="galleryIMG-3" class="gallery__unit--image"></div>
                     <figcaption class="gallery__unit--figcaption">
                         <h3 class="gallery__unit--figcaption-h3">Assian Egg Bowl</h3>
-                        <p class="gallery__unit--figcaption-p"> <span>Ingredients: </span>Grilled veggies, Noodles, Egg. Side of dumplings.</p>
+                        <p class="gallery__unit--figcaption-p"> <span>Ingredients: </span>Grilled veggies, Noodles, Egg.
+                            Side of dumplings.</p>
                     </figcaption>
                 </div>
                 <div class="gallery__unit-ef2">
                     <div id="galleryIMG-4" class="gallery__unit-ef2--image"></div>
                     <figcaption class="gallery__unit-ef2--figcaption">
-                        <h3 class="gallery__unit-ef2--figcaption-h3" >Pizza Margarita</h3>
-                        <p class="gallery__unit-ef2--figcaption-p"> <span>Ingredients: </span>Our own tomato sauce, mozzarella, cherry tomatoes.</p>
+                        <h3 class="gallery__unit-ef2--figcaption-h3">Pizza Margarita</h3>
+                        <p class="gallery__unit-ef2--figcaption-p"> <span>Ingredients: </span>Our own tomato sauce,
+                            mozzarella, cherry tomatoes.</p>
                     </figcaption>
                 </div>
                 <div class="gallery__unit">
                     <div id="galleryIMG-5" class="gallery__unit--image"></div>
                     <figcaption class="gallery__unit--figcaption">
-                        <h3 class="gallery__unit--figcaption-h3" >Chicken Asparagus</h3>
-                        <p class="gallery__unit--figcaption-p"> <span>Ingredients: </span>Grilled chicken, bacon wrapped Asparagus, Steamed carrots.</p>
+                        <h3 class="gallery__unit--figcaption-h3">Chicken Asparagus</h3>
+                        <p class="gallery__unit--figcaption-p"> <span>Ingredients: </span>Grilled chicken, bacon wrapped
+                            Asparagus, Steamed carrots.</p>
                     </figcaption>
                 </div>
                 <div class="gallery__unit-ef2">
                     <div id="galleryIMG-6" class="gallery__unit-ef2--image"></div>
                     <figcaption class="gallery__unit-ef2--figcaption">
-                        <h3 class="gallery__unit-ef2--figcaption-h3" >Coconut Chickpea Soup</h3>
-                        <p class="gallery__unit-ef2--figcaption-p"> <span>Ingredients: </span>Coconut milk, chickpea puree, Quinoa.</p>
+                        <h3 class="gallery__unit-ef2--figcaption-h3">Coconut Chickpea Soup</h3>
+                        <p class="gallery__unit-ef2--figcaption-p"> <span>Ingredients: </span>Coconut milk, chickpea
+                            puree, Quinoa.</p>
                     </figcaption>
                 </div>
-                <div class="gallery__unit"> 
+                <div class="gallery__unit">
                     <div id="galleryIMG-7" class="gallery__unit--image"></div>
                     <figcaption class="gallery__unit--figcaption">
-                        <h3 class="gallery__unit--figcaption-h3" >Choice Steak and Greens</h3>
-                        <p class="gallery__unit--figcaption-p"> <span>Ingredients: </span>Choice steak cut, with fresh griled veggies.</p>
+                        <h3 class="gallery__unit--figcaption-h3">Choice Steak and Greens</h3>
+                        <p class="gallery__unit--figcaption-p"> <span>Ingredients: </span>Choice steak cut, with fresh
+                            griled veggies.</p>
                     </figcaption>
                 </div>
                 <div class="gallery__unit-ef2">
                     <div id="galleryIMG-8" class="gallery__unit-ef2--image"></div>
                     <figcaption class="gallery__unit-ef2--figcaption">
-                        <h3 class="gallery__unit-ef2--figcaption-h3" >Cheese and Greens Panini</h3>
-                        <p class="gallery__unit-ef2--figcaption-p"> <span>Ingredients: </span>Whole wheat bread, 3 cheese blend, Mixed greens</p>
+                        <h3 class="gallery__unit-ef2--figcaption-h3">Cheese and Greens Panini</h3>
+                        <p class="gallery__unit-ef2--figcaption-p"> <span>Ingredients: </span>Whole wheat bread, 3
+                            cheese blend, Mixed greens</p>
                     </figcaption>
                 </div>
             </div>
-        </section>
-        <div id="testimonialsIMG-bg" class="fixed-img"></div>
-        <div id="testimonialsVeil" class="veil"></div>
-        <div id="testimonialsTXT-bg" class="text-bg"></div>
-        <section class="testimonials padding-container-bot">
-            <h3 class="padding-bot-h3 padding-container-top align-text-center text-light border-bottom">what people say about us</h3>
-            <div class="testimonials__grid">
+        </div>
+    </section>
+    <section id="testimonials-ID">
+        <div class="image-grid">
+            <div id="testimonialsIMG-bg" class="fixed-img"></div>
+        </div>
+        <div id="testimonialsTXT-bg" class="menu__contentWrapper">
+            <h3 class="border-bottom-light">What people say abou us</h3>
+            <div class="testimonials__grid"> 
                 <blockquote>
-                    I've crashed into a beet truck. Checkmate... I gave it a cold? I gave it a virus. A computer virus. Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists.
-                    <cite> <img src="img/common-img/testimonial-guy.jpg" alt="">  Rico Suave Jr. the 4th</cite>
+                    I've crashed into a beet truck. Checkmate... I gave it a cold? I gave it a virus. A computer virus.
+                    Yeah, but John, if The Pirates of the Caribbean breaks down, the pirates don’t eat the tourists.
+                    <cite> <img src="/img/common-img/testimonial-guy.jpg" alt=""> Rico Suave Jr. the 4th</cite>
                 </blockquote>
                 <blockquote>
-                    What do they got in there? King Kong? Did he just throw my cat out of the window? We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE!
-                    <cite><img src="img/common-img/testimonial-girl.jpg" alt="">Ginger Ginseng</cite>
+                    What do they got in there? King Kong? Did he just throw my cat out of the window? We gotta burn the
+                    rain forest, dump toxic waste, pollute the air, and rip up the OZONE!
+                    <cite><img src="/img/common-img/testimonial-girl.jpg" alt="">Ginger Ginseng</cite>
                 </blockquote>
                 <blockquote>
-                    'Cause maybe if we screw up this planet enough, they won't want it anymore! My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!
-                    <cite><img src="img/common-img/testimonial-dog.jpg" alt="">Papi 'el perro' Chulo</cite>
+                    'Cause maybe if we screw up this planet enough, they won't want it anymore! My dad once told me,
+                    laugh and the world laughs with you, Cry, and I'll give you something to cry about you little
+                    bastard!
+                    <cite><img src="/img/common-img/testimonial-dog.jpg" alt="">Papi 'el perro' Chulo</cite>
                 </blockquote>
             </div>
-        </section>
-        <div id="findUsIMG-bg" class="fixed-img"></div>
-        <div id="findUsVeil" class="veil"></div>
-        <div id="findUsTXT-bg" class="text-bg"></div>
-        <section class="findUs">
+        </div>
+    </section>
+    <section id="findUs-ID">
+        <div class="image-grid">
+            <div id="findUsIMG-bg" class="fixed-img"></div>
+        </div>
+        <div class="findUs">
             <div class="findUs__IMG-Container">
                 <div class="findUs__IMG"></div>
-                <a class="findUs__link" href="https://goo.gl/maps/Lz53Hh8Q9PNqp1Qs6">Get Directions!</a> 
-            </div> 
+                <a class="findUs__link" href="https://goo.gl/maps/Lz53Hh8Q9PNqp1Qs6">Get Directions!</a>
+            </div>
             <div class="findUs__txtBox padding-bot-h3">
                 <h3 class="padding-bot-h3 padding-container-top">come visit us</h3>
                 <h4 class="padding-bot-h3--footer">Address</h4>
                 <p class="footer__p">68 Royal Hospital Rd</p>
                 <p class="footer__p padding-botTXT">Chelsea, London SW3 4HP, UK</p>
-                <h4 class="padding-bot-h3--footer" >Phone Number</h4>
+                <h4 class="padding-bot-h3--footer">Phone Number</h4>
                 <p class="footer__p">+44 20 7352 4441</p>
             </div>
-        </section>
-        <div id="contactUsIMG-bg" class="fixed-img"></div>
-        <div id="contactUsVeil" class="veil"></div>
-        <div id="contactUsTXT-bg" class="text-bg"></div>
-        <section class="contactUs"> 
-            <h3 class="padding-container-top padding-bot-h3 padding-left-small">Catering / Reservations</h3>
+        </div>
+    </section>
+    <section id="contactUs-ID">
+        <div class="image-grid">
+            <div id="contactUsIMG-bg" class="fixed-img"></div>
+        </div>
+        <div class="menu__contentWrapper">
+            <h3 class="border-bottom-dark">Catering / reservations</h3>
             <form method="post" action="#" class="form padding-container-bot">
-                <input class="form__input form__name" type="text" name="name" id="form-name" placeholder="Your Name" required>
-                <label class="form__label form__name"  for="#">Name</label>
-                <input class="form__input form__email" type="email" name="email" id="form-email" placeholder="Your Email" required>
-                <label class="form__label form__email" for="#">Email</label>
-                <label class="form__text" for="#">Reason for contacting us today</label>
-                <select class="form__select" name="model" id="house-model">
-                    <option value="reason-1">Catering</option>
-                    <option value="reason-2">Reservations</option>
-                    <option value="reason-3">Other</option>
-                </select>
-                <label id="message-txt" class="form__text" for="#">How can we help?</label>
-                <textarea class="form__input" name="message" placeholder="Leave us a message" id="message-box" cols="30" rows="10"></textarea>
-                <div id="submit-button" class="form__button-wrapper">
-                    <input id="" class="form__button" type="submit" value="Send it!">
-                </div>
-            </form>          
-        </section>
-        
-        <div id="footer-bg"></div>
-        <footer class="footer">
-            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3358.8994314459596!2d-115.44776738384007!3d32.66212028100693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d771b2920ae3e9%3A0x3be5346079befd40!2sEpicentro+Coworking+Space!5e0!3m2!1sen!2smx!4v1554851509876!5m2!1sen!2smx" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> 
-            <div class="footer__textBox">
-                <h4 class="padding-bot-h3--footer">Address</h4>
-                <p class="footer__p">Calle Caracas #433</p>
-                <p class="footer__p padding-botTXT">21200 Mexicali, B.C.</p>
-                <h4 class="padding-bot-h3--footer" >Phone Number</h4>
-                <p class="footer__p">(686) 332-4233</p>
-                <div class="footer__socialMedia"> 
-                    <svg class="footer__socialMedia--icon">
-                        <use xlink:href="icon/sprite.svg#icon-facebook"></use>
-                    </svg>
-                    <svg class="footer__socialMedia--icon">
-                        <use xlink:href="icon/sprite.svg#icon-twitter"></use>
-                    </svg>
-                    <svg class="footer__socialMedia--icon">
-                        <use xlink:href="icon/sprite.svg#icon-instagram"></use>
-                    </svg>
-                    <svg class="footer__socialMedia--icon">
-                        <use xlink:href="icon/sprite.svg#icon-google"></use>
-                    </svg>
-                </div>
-            </div>  
-        </footer>   
-        
-        <!--
-        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3358.8994314459596!2d-115.44776738384007!3d32.66212028100693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d771b2920ae3e9%3A0x3be5346079befd40!2sEpicentro+Coworking+Space!5e0!3m2!1sen!2smx!4v1554851509876!5m2!1sen!2smx" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> 
-            <!-- map link : https://goo.gl/maps/T6PeBU8Gj7N2-->  
-            <!-- gordon ramsey restaurant https://goo.gl/maps/Lz53Hh8Q9PNqp1Qs6--> 
+                    <input class="form__input form__name" type="text" name="name" id="form-name" placeholder="Your Name"
+                        required>
+                    <label class="form__label form__name" for="#">Name</label>
+                    <input class="form__input form__email" type="email" name="email" id="form-email"
+                        placeholder="Your Email" required>
+                    <label class="form__label form__email" for="#">Email</label>
+                    <label class="form__text form__selectText" for="#">Reason for contacting us today</label>
+                    <select class="form__select" name="model" id="house-model">
+                        <option value="reason-1">Catering</option>
+                        <option value="reason-2">Reservations</option>
+                        <option value="reason-3">Other</option>
+                    </select>
+                    <label id="message-txt" class="form__text form__messageTXT" for="#">How can we help?</label>
+                    <textarea class="form__input form__message" name="message" placeholder="Leave us a message" id="message-box" cols="30"
+                        rows="10"></textarea>
+                    <div id="submit-button" class="form__button-wrapper">
+                        <input id="" class="form__button" type="submit" value="Send it!">
+                    </div>
+                </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__socialMedia"> 
+            <a href="https://www.facebook.com">
+                <svg class="footer__socialMedia--icon">
+                    <use xlink:href="svgs/sprite.svg#icon-facebook"></use>
+                </svg>
+            </a>
+            <a  href="https://www.instagram.com">
+                <svg class="footer__socialMedia--icon">
+                    <use xlink:href="svgs/sprite.svg#icon-instagram"></use>
+                </svg>
+            </a>
+            <a href="https://twitter.com">
+                <svg class="footer__socialMedia--icon">
+                    <use xlink:href="svgs/sprite.svg#icon-twitter"></use>
+                </svg>
+            </a>
+        </div>
+        <div>
+            <h5 class="footer__ThankYou waypoint-hide waypoint--7">Thank you for Reading!</h5>
+        </div>
+        <div class="footer__textBox">
+            <h4 class="padding-bot-h3--footer">Location</h4>
+            <p class="footer__p padding-botTXT">Phoenix - AZ</p>
+            <h4 class="padding-bot-h3--footer" >Phone Number</h4>
+            <p class="footer__p">(480) 745-6193</p>
+        </div>
+        <div>
+            <p class="footer__copyright">Copyright &copy; Munchkin Softwoks 2019. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- CREDITS SECTION BELOW -->
+    <button id="credit-content_1" onclick="test_1()" class="credits__button ">Credits</button>
+    <div id="credit-content_2" class="credits__content">
+        <h4 class="gallery__description--h4-right">Designed and Developed by <span>MuNChKIN SoftWoRks</span></h4>
+        <h4 class="gallery__description--h4-right">Pictures</h4>
+        <p>Ella Olson / Maarten van den Heuvel / John Legrand / Pablo Merchán Montes / Brooke Lark / Jon Tyson / Mike Scheid / Jeff Sheldon -- <i>from unsplash.com</i> </p>
+        <h4 class="gallery__description--h4-right">Fonts</h4>
+        <p>Roboto / Comfortaa / Pacifico -- <i>from fonts.google.com </i></p>
     </div>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"> <!-- Prevent FOUC at cost of slightly longer load time (few ms)-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
+    <noscript>
+        <style>
+            .loading__wrapper { animation: fadeOut 1s;
+                                animation-fill-mode: forwards;}
+        </style>
+    </noscript>
 </body>
 </html>
